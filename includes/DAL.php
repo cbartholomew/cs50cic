@@ -7,11 +7,11 @@
  * Purpose		: Opens connection to MySQL server & Loads additional helpers
  * seperated this because some of the calls don't require authentication
  **********************************************************************/
- // 
- // define("DB_NAME", 	   "cs50cicdb");
- // define("DB_SERVER",   "50.63.233.113");
- // define("DB_USERNAME", "cs50cicdb");
- // define("DB_PASSWORD", "C250C1Cc250c1c!");
+
+// define("DB_NAME", 	   "cs50cicdb");
+// define("DB_SERVER",   "50.63.233.113");
+// define("DB_USERNAME", "cs50cicdb");
+// define("DB_PASSWORD", "C250C1Cc250c1c");
 
 define("DB_NAME", 	   "cs50cic");
 define("DB_SERVER",    "localhost");

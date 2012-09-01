@@ -16,7 +16,7 @@ $(document).ready(function(){
  
 	$("#nav").html("<a id='to_practice_select' href='#' >Practice Select</a>" + " > " + practiceObject.title);
 	
-	$("#to_mission_select").click(function(){
+	$("#to_practice_select").click(function(){
 		$("#content").load("content/practice/practice_select.php", function(){   
 			$("#nav").html("Practice Select");						
 		});

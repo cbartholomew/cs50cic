@@ -38,3 +38,9 @@ button {
 span {
 	padding: 10px;	
 }
+
+.table_data {
+	border-color: white;
+	border-size: 1px;
+	
+}

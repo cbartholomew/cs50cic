@@ -1,0 +1,39 @@
+<script>
+	/*
+	 * Inventory array holds a list of objects. Just add a new object with these members.
+	 */
+	var inventory = [
+		{ 
+			quantity: "1",
+			item: ITEM_LIST["ARDUINO"]
+		}	
+	]; 
+	
+	// this script will render the html needed to create the table
+	var inventory_html = '';
+	$(inventory).each(function(index){
+		inventory_html += '<tr>';
+		inventory_html += '<td class="ui-widget-content">' + this.quantity + '</td>';	
+		inventory_html += '<td class="ui-widget-content">' + this.item 	   + '</td>';	
+		inventory_html += '<td class="ui-widget-content">' + this.type 	   + '</td>';	
+		inventory_html += '<td class="ui-widget-content">' + this.color    + '</td>';	
+		inventory_html += '</tr>';
+	});
+	
+	// append html the tbody
+	$("#inventory_list").append(inventory_html);
+	
+</script>
+
+
+<div id='inventory'>
+	<table>
+	<thead>
+	<th class='ui-widget-header'>Quantity</th>
+	<th class='ui-widget-header'>Item</th>
+	<th class='ui-widget-header'>Type</th>
+	<th class='ui-widget-header'>Color</th>
+	</thead>
+	<tbody id='inventory_list'></tbody>
+	</table>
+</div>

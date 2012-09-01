@@ -1,9 +1,59 @@
-<div>
-<ol>
-<li>1 x Arduino Uno</li>
-<li>2 x 330Ω Resistors</li>
-<li>2 x LEDs, any color</li>
-<li>4 x Jump Cables</li>
-<li>1 x Breadboard</li>
-</ol>	
+<script>
+	/*
+	 * Inventory array holds a list of objects. Just add a new object with these members.
+	 */
+	var inventory = [
+		{ 
+			quantity: "1",
+			item	: ITEM_LIST["ARDUINO"]
+		},
+		{ 
+			quantity: "1",
+			item	: ITEM_LIST["BREADBOARD"]
+		},
+		{ 
+			quantity: "3",
+			item	: ITEM_LIST["RESISTORS_330"]
+		},
+		{ 
+			quantity: "3",
+			item	: ITEM_LIST["LED"]
+		},
+		{ 
+			quantity: "7",
+			item	: ITEM_LIST["JUMPER_CABLES"]
+		}	
+	];
+	
+	// this script will render the html needed to create the table
+	var inventory_html = '';
+	$(inventory).each(function(index){
+		
+		// more colors may exsists then accounted for
+	    item_color = (this.item.color.isMulti == true) ? this.item.color.red + "," + this.item.color.green + "," + this.item.color.yellow : this.item.color.default;
+		
+		inventory_html += '<tr>';
+		inventory_html += '<td class="ui-widget-content">' + this.quantity 		   + '</td>';	
+		inventory_html += '<td class="ui-widget-content">' + this.item.name 	   + '</td>';	
+		inventory_html += '<td class="ui-widget-content">' + this.item.type  	   + '</td>';	
+		inventory_html += '<td class="ui-widget-content">' + item_color  	       + '</td>';	
+		inventory_html += '</tr>';
+	});
+
+	// append html the tbody
+	$("#inventory_list").append(inventory_html);
+	
+</script>
+
+
+<div id='inventory'>
+	<table class='table_data'>
+	<thead>
+	<th class='ui-widget-header'>Quantity</th>
+	<th class='ui-widget-header'>Item</th>
+	<th class='ui-widget-header'>Type</th>
+	<th class='ui-widget-header'>Color</th>
+	</thead>
+	<tbody id='inventory_list'></tbody>
+	</table>
 </div>

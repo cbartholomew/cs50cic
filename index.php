@@ -31,11 +31,11 @@
 		
 		
 		// create new user obj
-		//$u = new User($_SESSION["user"]);
+		$u = new User($_SESSION["user"]);
 		
 		// get user info || insert into since he or she is new
-		//if(!$u->getUser())
-		//	$u->insert();
+		if(!$u->getUser())
+			$u->insert();
 		
 		// render html
 		return $html;
@@ -63,6 +63,7 @@
 	<script src="js/mission_config.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/practice_config.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/User.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/item_list.js" type="text/javascript" charset="utf-8"></script>
 	
 	<script>
 		$(document).ready(function(){

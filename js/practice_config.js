@@ -36,7 +36,7 @@ var PRACTICE_CONFIG = [
 		{
 			id: 1,
 			type: "Hardware",
-			title: "P1: Sound and Arrays!",
+			title: "P1: Sound and Arrays",
 			flavor:{
 				html: "flavor/practice_flavor_1.html",
 				pdf : "flavor/practice_flavor_1.pdf"
@@ -69,7 +69,7 @@ var PRACTICE_CONFIG = [
 		{
 			id: 2,
 			type: "Hardware",
-			title: "P2: Looking at Recursion!",
+			title: "P2: Looking at Recursion",
 			flavor:{
 				html: "flavor/practice_flavor_2.html",
 				pdf : "flavor/practice_flavor_2.pdf"
