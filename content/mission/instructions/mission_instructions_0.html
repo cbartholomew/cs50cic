@@ -1,9 +1,40 @@
-<div>
-<ul>
-<li>Objective 0: Ensure both terminals, A & B pins are correctly set. A should be 12, and B should be 13</li>
-<li>Objective 1: Ensure that you shutdown terminal for no more than 10 seconds</li>
-<li>Objective 2: Shutdown Terminal A, Keeping Terminal B On</li>
-<li>Objective 3: Both Terminals should be shutdown</li>
-<li>Objective 4: Both Terminals should be powered back on after 20 seconds, total</li>
-</ul>	
+<script>
+var instructions = [
+	{
+		stepId: 0,
+		objective: "Ensure both terminals, A & B pins are correctly set. A should be 12, and B should be 13"
+	},
+	{
+		stepId: 1,
+		objective: "Ensure that you shutdown terminal for no more than 10 seconds"
+	},
+	{
+		stepId: 2,
+		objective: "Shutdown Terminal A, Keeping Terminal B On"
+	},
+	{
+		stepId: 3,
+		objective: "Both Terminals should be shutdown"
+	},
+	{
+		stepId: 4,
+		objective: "Both Terminals should be powered back on after 15 seconds, total"
+	},
+
+
+];
+
+// this script will render the html needed to create the table
+var instructions_html = '';
+$(instructions).each(function(index){
+	instructions_html += '<li class="ui-widget-content ui-corner-all">Objective ' + this.stepId.toString() + ': ' + this.objective + '</li>'
+});
+
+// append html the tbody
+$("#instructions_list").append(instructions_html);
+
+</script>
+
+<div id="instructions">
+<ul id="instructions_list"></ul>
 </div>

@@ -1,5 +1,7 @@
 <?php
     require_once("../../includes/config.php");
+	// check if user is logged in, if not redirect
+	isLoggedIn();
 ?>
 <script>
 	$(function() {

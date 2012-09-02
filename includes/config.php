@@ -16,6 +16,20 @@
     // ensure $_SESSION exists
     session_start();
 
+
+	function isLoggedIn() {
+		
+		if(!isset($_SESSION["user"]))
+		{
+			// redirect user to index.php
+		    $protocol = (isset($_SERVER["HTTPS"])) ? "https" : "https";
+		    $host  = $_SERVER["HTTP_HOST"];
+		    $path = rtrim(dirname($_SERVER["PHP_SELF"]), "/\\");
+		    header("Location: {$protocol}://{$host}{$path}/index.php");
+		}
+		
+	}
+
  	// $_SESSION["user"]["fullname"] = "Christopher Milhomem Bartholomew";
  	// $_SESSION["user"]["identity"] = "https://id.cs50.net/a10d1de1cacbc180f7231d6fee9489d35c53ad05fc8fffbe92bcfcabab17b892";
  	// $_SESSION["user"]["email"]	  = "cbartholomew@gmail.com";

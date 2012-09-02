@@ -4,14 +4,14 @@
 var instructions = [
 	{
 		stepId: 0,
-		objective: "<i>To Do</i>"
+		objective: "Ensure both terminals, A & B pins are correctly set. A should be 12, and B should be 13"
 	}
 ];
 
 // this script will render the html needed to create the u list
 var instructions_html = '';
 $(instructions).each(function(index){
-	instructions_html += '<li class="ui-widget-content ui-corner-all">Objective ' + this.stepId.toString() + ': ' + this.objective + '</li>'
+	instructions_html += '<li class="ui-widget-content">Objective ' + this.stepId.toString() + ': ' + this.objective + '</li>'
 });
 
 // append html the tbody

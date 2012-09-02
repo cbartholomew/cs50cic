@@ -6,7 +6,7 @@
     // if user is already logged in, redirect to index.php
     if (isset($_SESSION["user"]))
     {	
-        $protocol = (isset($_SERVER["HTTPS"])) ? "https" : "http";
+        $protocol = (isset($_SERVER["HTTPS"])) ? "https" : "https";
         $host  = $_SERVER["HTTP_HOST"];
         $path = rtrim(dirname($_SERVER["PHP_SELF"]), "/\\");
         header("Location: {$protocol}://{$host}{$path}/index.php");

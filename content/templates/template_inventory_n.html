@@ -12,11 +12,15 @@
 	// this script will render the html needed to create the table
 	var inventory_html = '';
 	$(inventory).each(function(index){
+		
+		// more colors may exsists then accounted for
+	    item_color = (this.item.color.isMulti == true) ? this.item.color.red : this.item.color.default;
+		
 		inventory_html += '<tr>';
 		inventory_html += '<td class="ui-widget-content">' + this.quantity + '</td>';	
 		inventory_html += '<td class="ui-widget-content">' + this.item 	   + '</td>';	
 		inventory_html += '<td class="ui-widget-content">' + this.type 	   + '</td>';	
-		inventory_html += '<td class="ui-widget-content">' + this.color    + '</td>';	
+		inventory_html += '<td class="ui-widget-content">' + item_color    + '</td>';	
 		inventory_html += '</tr>';
 	});
 	

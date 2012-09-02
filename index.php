@@ -19,7 +19,7 @@
 	{
 			
 		$html = "";
-		$html .= "<div id='login_start' class='ui-widget-content ui-corner-all'>Welcome Agent " . htmlspecialchars($_SESSION["user"]["fullname"]) . "!</div>";
+		$html .= "<div id='login_start' class='ui-widget-content ui-corner-all'>Welcome " . htmlspecialchars($_SESSION["user"]["fullname"]) . "!</div>";
 		$html .= "<br>";
 		$html .= "<span id='nav'></span>";
 		$html .= "</div>";

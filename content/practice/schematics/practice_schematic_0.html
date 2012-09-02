@@ -1,3 +1,20 @@
-<div>
-<p>Image of Schematic and Visual representation of circuit should be here.</p>
-</div>
+<script>
+// create schematic object to hold image and its properties
+var SCHEMATIC = {
+	path:   "../content/images/placeholder.png",
+	tite:   "Placeholder",
+	height: "300px",
+	width:  "225px"
+};
+
+
+// automatically render schematic based on the object's properties
+var imageHtml = "";
+imageHtml = '<a href="' + SCHEMATIC.path +'"><img src="' + SCHEMATIC.path +'" height="' + SCHEMATIC.height + '" width="' + SCHEMATIC.width + '" alt="' + SCHEMATIC.title + '"></a>'; 
+
+// append to schematic div
+$("#schematic").append(imageHtml);
+
+</script>
+
+<div id="schematic"></div>
