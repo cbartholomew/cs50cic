@@ -24,6 +24,9 @@
 		  }
 		);
 		
+		$("#mission_info").load("content/help/mission_info.html");
+		
 	});
 </script>
-<div><ul id='mission_list'></ul></div>
+<div id="mission_info"></div>
+<div class="select_pages"><ul id='mission_list'></ul></div>

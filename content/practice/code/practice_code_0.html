@@ -1,0 +1,43 @@
+<script>
+
+$(document).ready(function(){
+	/*
+	 * Inventory array holds a list of objects. Just add a new object with these members.
+	 */
+	var code = [
+		{ 
+			fileName: "MISSION_0_STUDENT",
+			fileType: "Arduino Sketch",
+			fileURL:  "sketches/MISSION0_STUDENT.ino",
+			fileVersion: "1.0"
+		}	
+	]; 
+	
+	// this script will render the html needed to create the table
+	var code_html = '';
+	$(code).each(function(index){
+		
+		code_html += '<tr>';
+		code_html += '<td class="ui-widget-content"><a href="' + this.fileURL + '"' + this.fileName  + '</td>';	
+		code_html += '<td class="ui-widget-content">' + this.fileType + '</td>';
+		code_html += '<td class="ui-widget-content">' + this.fileVersion + '</td>';
+		code_html += '</tr>';
+		
+	});
+
+	// append html the tbody
+	$("#code_list").append(code_html);
+});
+</script>
+
+
+<div id='code'>
+	<table>
+	<thead>
+	<th class='ui-widget-header'>File Name</th>
+	<th class='ui-widget-header'>File Type</th>
+	<th class='ui-widget-header'>File Version</th>
+	</thead>
+	<tbody id='code_list'></tbody>
+	</table>
+</div>

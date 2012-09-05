@@ -14,12 +14,28 @@ body {
 #mission_list .ui-selecting { background: #FECA40; }
 #mission_list .ui-selected  { background: #F39814; color: white; }
 #mission_list { list-style-type: none; margin: 0; padding: 0; }
-#mission_list li { margin: 3px; padding: 1px; float: left; width: 275px; height: 80px; font-size: 1em; font-family: cursive; text-align: center; }
+#mission_list li { margin: 3px; padding: 1px; float: left; width: 200px; height: 80px; font-size: 1em; font-family: cursive; text-align: center; }
 
 #practice_list .ui-selecting { background: #FECA40; }
 #practice_list .ui-selected  { background: #F39814; color: white; }
 #practice_list { list-style-type: none; margin: 0; padding: 0; }
-#practice_list li { margin: 3px; padding: 1px; float: left; width: 275px; height: 80px; font-size: 1em; font-family: cursive; text-align: center; }
+#practice_list li { margin: 3px; padding: 1px; float: left; width: 200px; height: 80px; font-size: 1em; font-family: cursive; text-align: center; }
+
+.info {
+	width: 400px;
+	font-size: .8em;
+	padding: 10px;
+	float: left;
+}
+
+.text {
+	font-size: .8em;
+	padding: 10px;
+}
+
+.select_pages {
+	width: 800px;	
+}
 
 h1 { 
 
@@ -33,10 +49,6 @@ div {
 
 button {
 	padding: 5px;
-}
-
-span {
-	padding: 10px;	
 }
 
 .table_data {

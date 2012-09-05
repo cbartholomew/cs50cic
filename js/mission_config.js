@@ -2,7 +2,7 @@ var MISSION_CONFIG = [
 		 {
 			id: 0,
 			type: "Hardware",
-			title: "Mission 0: The Recruit",
+			title: "M0: The Recruit",
 			flavor:{
 				html: "flavor/mission_flavor_0.html",
 				pdf : "flavor/mission_flavor_0.pdf"
@@ -28,15 +28,14 @@ var MISSION_CONFIG = [
 				pdf : "challenges/mission_challenges_0.pdf"
 			},
 			code: {
-				arduino_sketch: "../error/not_found.html",
-				arduino_additional : ["placeholder1", "placeholder2"]
+				arduino_sketch: "code/mission_code_0.html",
 			}
 	
 		},
 		{
 			id: 1,
 			type: "Hardware",
-			title: "Mission 1: First Steps",
+			title: "M1: First Steps",
 			flavor:{
 				html: "flavor/mission_flavor_1.html",
 				pdf : "flavor/mission_flavor_1.pdf"
@@ -69,7 +68,7 @@ var MISSION_CONFIG = [
 		{
 			id: 2,
 			type: "Hardware",
-			title: "Mission 2:",
+			title: "M2:",
 			flavor:{
 				html: "flavor/mission_flavor_2.html",
 				pdf : "flavor/mission_flavor_2.pdf"
@@ -102,7 +101,7 @@ var MISSION_CONFIG = [
 		{
 			id: 3,
 			type: "Hardware",
-			title: "Mission 3:",
+			title: "M3:",
 			flavor:{
 				html: "flavor/mission_flavor_3.html",
 				pdf : "flavor/mission_flavor_3.pdf"
@@ -135,7 +134,7 @@ var MISSION_CONFIG = [
 		{
 			id: 4,
 			type: "Hardware",
-			title: "Mission 4: ",
+			title: "M4: ",
 			flavor:{
 				html: "flavor/mission_flavor_4.html",
 				pdf : "flavor/mission_flavor_4.pdf"
@@ -168,7 +167,7 @@ var MISSION_CONFIG = [
 		{
 			id: 5,
 			type: "Hardware",
-			title: "Mission 5:",
+			title: "M5:",
 			flavor:{
 				html: "flavor/mission_flavor_5.html",
 				pdf : "flavor/mission_flavor_5.pdf"
@@ -201,7 +200,7 @@ var MISSION_CONFIG = [
 		{
 			id: 6,
 			type: "Hardware",
-			title: "Mission 6: ",
+			title: "M6: ",
 			flavor:{
 				html: "flavor/mission_flavor_6.html",
 				pdf : "flavor/mission_flavor_6.pdf"
@@ -234,7 +233,7 @@ var MISSION_CONFIG = [
 		{
 			id: 7,
 			type: "Hardware",
-			title: "Mission 7:",
+			title: "M7:",
 			flavor:{
 				html: "flavor/mission_flavor_7.html",
 				pdf : "flavor/mission_flavor_7.pdf"
@@ -267,7 +266,7 @@ var MISSION_CONFIG = [
 		{
 			id: 8,
 			type: "Hardware",
-			title: "Mission 8:",
+			title: "M8:",
 			flavor:{
 				html: "flavor/mission_flavor_8.html",
 				pdf : "flavor/mission_flavor_8.pdf"

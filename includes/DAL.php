@@ -32,3 +32,4 @@ function close_connection()
 }
 
 ?>
+

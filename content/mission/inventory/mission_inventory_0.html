@@ -38,15 +38,51 @@
 		
 		inventory_html += '<tr>';
 		inventory_html += '<td class="ui-widget-content">' + this.quantity    	   + '</td>';	
-		inventory_html += '<td class="ui-widget-content">' + this.item.name 	   + '</td>';	
+		inventory_html += '<td class="ui-widget-content"  image="' + this.item.image + '">' + this.item.name + '</td>';
 		inventory_html += '<td class="ui-widget-content">' + this.item.type 	   + '</td>';	
-		inventory_html += '<td class="ui-widget-content">' + item_color    + '</td>';	
+		inventory_html += '<td class="ui-widget-content">' + item_color    		   + '</td>';	
 		inventory_html += '</tr>';
 	});
 	
 	// append html the tbody
 	$("#inventory_list").append(inventory_html);
-	
+	$(document).ready(function(){
+		// create a default modal
+		var modal_config = {
+			div: "preview", 
+			title: "Image",
+			height: 300, 
+			width: 300, 
+			text: '<img src="" height="100"/>'
+		};
+		
+		// init new config
+		var modal = new ModalDialog(modal_config);
+		
+		// bind hover listener
+		$("td").hover(
+		  function () {
+			if($(this).attr("image") != null){
+				$(this).addClass('ui-state-hover');
+				var modal_config = {
+					div: "preview", 
+					title: $(this).html(),
+					height: 400, 
+					width: 500, 
+					text: '<center><img class="ui-corner-all" src="' + $(this).attr("image") + '" height="300px"/><center>'
+				};
+				modal.set_info(modal_config);
+				modal.open();
+			}
+		    
+		  }, 
+		  function () {
+		    	$(this).removeClass('ui-state-hover');
+		    	modal.close();
+		  }
+		);
+		
+	});
 </script>
 
 
@@ -60,4 +96,7 @@
 	</thead>
 	<tbody id='inventory_list'></tbody>
 	</table>
+</div>
+<div id="preview">
+	
 </div>

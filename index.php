@@ -21,14 +21,13 @@
 		$html = "";
 		$html .= "<div id='login_start' class='ui-widget-content ui-corner-all'>Welcome " . htmlspecialchars($_SESSION["user"]["fullname"]) . "!</div>";
 		$html .= "<br>";
-		$html .= "<span id='nav'></span>";
+		$html .= "<span id='nav' style='padding:10px'></span>";
 		$html .= "</div>";
 		$html .= "<div class='ui-helper-hidden'>";
 		$html .= "<input type='hidden' id='fullname' value='" . htmlspecialchars($_SESSION["user"]["fullname"])  . "'/>";
 		$html .= "<input type='hidden' id='ident' 	 value='" . htmlspecialchars($_SESSION["user"]["identity"])  . "'/>";
 		$html .= "<input type='hidden' id='email' 	 value='" . htmlspecialchars($_SESSION["user"]["email"]) 	 . "'/>";
 		$html .= "</div>";
-		
 		
 		// create new user obj
 		$u = new User($_SESSION["user"]);
@@ -64,6 +63,7 @@
 	<script src="js/practice_config.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/User.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/item_list.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/modal_dialog.js" type="text/javascript" charset="utf-8"></script>
 	
 	<script>
 		$(document).ready(function(){
@@ -120,7 +120,8 @@
 			$("#tools").buttonset();
 			
 			$("#login_message").html(MESSAGE_DICTIONARY["NO_LOGIN"].message);
-
+			
+			$('#content').load('content/help/important_note.php');
 		});
 	</script>
   </head>
@@ -129,8 +130,8 @@
 
 	<div class="ui-widget-header ui-corner-all">
 		<span id="tools">
-			<input type="radio" id="missions" 	 name="tool" /><label for="missions">Missions</label>
 			<input type="radio" id="practice" 	 name="tool" /><label for="practice">Practice</label>
+			<input type="radio" id="missions" 	 name="tool" /><label for="missions">Missions</label>
 			<input type="radio" id="submission"  name="tool" /><label for="submission">Submission</label>
 			<input type="radio" id="glossary"  	 name="tool" /><label for="glossary">Glossary</label>
 			<input type="radio" id="help"  	 	 name="tool" /><label for="help">Help</label>
@@ -138,12 +139,9 @@
 			<input type="radio" id="logout"      name="tool" /><label for="logout">Logout</label>
 		</span>
 	</div>	
-	<br>
-	<br>
 	<div class='ui-widget-content ui-corner-all'>
 		<?php echo (isset($_SESSION["user"])) ? getLoggedInHtml() : getLoggedOutHtml() ?>
 	</div>
-	<br>
 	<div class='ui-widget ui-corner-all' id='content'></div>
   </body>
 </html>

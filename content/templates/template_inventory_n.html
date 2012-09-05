@@ -1,4 +1,6 @@
 <script>
+
+$(document).ready(function(){
 	/*
 	 * Inventory array holds a list of objects. Just add a new object with these members.
 	 */
@@ -17,16 +19,53 @@
 	    item_color = (this.item.color.isMulti == true) ? this.item.color.red : this.item.color.default;
 		
 		inventory_html += '<tr>';
-		inventory_html += '<td class="ui-widget-content">' + this.quantity + '</td>';	
-		inventory_html += '<td class="ui-widget-content">' + this.item 	   + '</td>';	
-		inventory_html += '<td class="ui-widget-content">' + this.type 	   + '</td>';	
-		inventory_html += '<td class="ui-widget-content">' + item_color    + '</td>';	
+		inventory_html += '<td class="ui-widget-content">' 	   + this.quantity  + '</td>';	
+		inventory_html += '<td class="ui-widget-content"  image="' + this.item.image + '">' + this.item.name 	   + '</td>';
+		inventory_html += '<td class="ui-widget-content">' 	   + this.item.type + '</td>';	
+		inventory_html += '<td class="ui-widget-content">' 	   + item_color     + '</td>';	
 		inventory_html += '</tr>';
+		
+		$("#" + this.item.name).hover(modal.open());
 	});
-	
+
 	// append html the tbody
 	$("#inventory_list").append(inventory_html);
 	
+	$(document).ready(function(){
+		
+		var modal_config = {
+			div: "preview", 
+			title: "Image",
+			height: 300, 
+			width: 300, 
+			text: '<img src="" height="100"/>'
+		};
+		
+		var modal = new ModalDialog(modal_config);
+		
+		$("td").hover(
+		  function () {
+			if($(this).attr("image") != null){
+				
+				var modal_config = {
+					div: "preview", 
+					title: $(this).html(),
+					height: 400, 
+					width: 500, 
+					text: '<center><img class="ui-corner-all" src="' + $(this).attr("image") + '" height="300px"/><center>'
+				};
+				modal.set_info(modal_config);
+				modal.open();
+			}
+		    
+		  }, 
+		  function () {
+		    	modal.close();
+		  }
+		);
+		
+	});
+});
 </script>
 
 
@@ -41,3 +80,4 @@
 	<tbody id='inventory_list'></tbody>
 	</table>
 </div>
+<div id='preview' class='ui-helper-hidden'></div>

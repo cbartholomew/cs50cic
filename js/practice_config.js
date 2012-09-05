@@ -62,8 +62,7 @@ var PRACTICE_CONFIG = [
 				pdf : "challenges/practice_challenges_1.pdf"
 			},
 			code: {
-				arduino_sketch: "error/not_found.html",
-				arduino_additional : ["placeholder1", "placeholder2"]
+				arduino_sketch: "code/practice_code_0.html"
 			}
 		},
 		{

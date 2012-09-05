@@ -4,6 +4,7 @@
 	isLoggedIn();
 ?>
 <script>
+$(document).ready(function(){
 	$(function() {
 		$("#practice_list").selectable({
 			selected: function(event, ui) { 
@@ -21,9 +22,11 @@
 		  }, 
 		  function () {
 		    $(this).removeClass('ui-state-hover');
-		  }
-		);
-		
+		});
+
+		$("#practice_info").load("content/help/practice_info.html");
 	});
+});
 </script>
-<div><ul id='practice_list'></ul></div>
+<div id="practice_info"></div>
+<div class="select_pages"><ul id='practice_list'></ul></div>
