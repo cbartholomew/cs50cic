@@ -64,6 +64,7 @@
 	<script src="js/User.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/item_list.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/modal_dialog.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/glossary.js" type="text/javascript" charset="utf-8"></script>
 	
 	<script>
 		$(document).ready(function(){
@@ -106,15 +107,21 @@
 			});
 			
 			$("#glossary").button().click(function(){
-				console.log("ajax call goes here");
+				$("#content").load("content/glossary/glossary.php", function(){   
+					$("#nav").html("Glossary");						
+				});
 			});
 			
 			$("#help").button().click(function(){
-				console.log("ajax call goes here");
+				$("#content").load("content/help/help_info.php", function(){   
+					$("#nav").html("Helpful Information");						
+				});
 			});
 			
-			$("#preferences").button().click(function(){
-				console.log("ajax call goes here");
+			$("#reference").button().click(function(){
+				$("#content").load("content/reference/reference_info.php", function(){   
+					$("#nav").html("References");						
+				});
 			});			
 
 			$("#tools").buttonset();
@@ -135,7 +142,7 @@
 			<input type="radio" id="submission"  name="tool" /><label for="submission">Submission</label>
 			<input type="radio" id="glossary"  	 name="tool" /><label for="glossary">Glossary</label>
 			<input type="radio" id="help"  	 	 name="tool" /><label for="help">Help</label>
-			<input type="radio" id="preferences" name="tool" /><label for="preferences">Preferences</label>
+			<input type="radio" id="reference" name="tool" /><label for="reference">Reference</label>
 			<input type="radio" id="logout"      name="tool" /><label for="logout">Logout</label>
 		</span>
 	</div>	
