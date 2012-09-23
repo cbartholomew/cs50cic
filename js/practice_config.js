@@ -2,7 +2,7 @@ var PRACTICE_CONFIG = [
 		 {
 			id: 0,
 			type: "Hardware",
-			title: "P0: Lights and Loops",
+			title: "P0: Installing the IDE",
 			flavor:{
 				html: "flavor/practice_flavor_0.html",
 				pdf : "flavor/practice_flavor_0.pdf"
@@ -28,15 +28,14 @@ var PRACTICE_CONFIG = [
 				pdf : "challenges/practice_challenges_0.pdf"
 			},
 			code: {
-				arduino_sketch: "../error/not_found.html",
-				arduino_additional : ["placeholder1", "placeholder2"]
+				arduino_sketch: "code/practice_code_0.html"
 			}
 	
 		},
 		{
 			id: 1,
 			type: "Hardware",
-			title: "P1: Sound and Arrays",
+			title: "P1: Let me, <i>ASCII</i> ya name",
 			flavor:{
 				html: "flavor/practice_flavor_1.html",
 				pdf : "flavor/practice_flavor_1.pdf"
@@ -68,7 +67,7 @@ var PRACTICE_CONFIG = [
 		{
 			id: 2,
 			type: "Hardware",
-			title: "P2: Looking at Recursion",
+			title: "P2:",
 			flavor:{
 				html: "flavor/practice_flavor_2.html",
 				pdf : "flavor/practice_flavor_2.pdf"

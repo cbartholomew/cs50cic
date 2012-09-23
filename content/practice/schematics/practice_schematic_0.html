@@ -1,20 +1,58 @@
 <script>
 // create schematic object to hold image and its properties
 var SCHEMATIC = {
-	path:   "../content/images/placeholder.png",
+	path:   "content/images/placeholder.png",
 	tite:   "Placeholder",
 	height: "300px",
 	width:  "225px"
 };
 
+var REFERENCE = [
+	{
+		name: "setup()",
+		url : "http://arduino.cc/en/Reference/Setup"		
+	},
+	{
+		name: "loop()",
+		url : "http://arduino.cc/en/Reference/Loop"		
+	},
+	{
+		name: "pinMode()",
+		url : "http://arduino.cc/en/Reference/PinMode"		
+	},
+	{
+		name: "digitalWrite()",
+		url : "http://arduino.cc/en/Reference/DigitalWrite"		
+	},
+	{
+		name: "digitalRead()",
+		url : "http://arduino.cc/en/Reference/DigitalRead"		
+	},
+	{
+		name: "delay()",
+		url : "http://arduino.cc/en/Reference/Delay"		
+	},
+	{
+		name: "Serial.println()",
+		url : "http://arduino.cc/en/Serial/Println"		
+	}
+];
+
+var referenceText = "<ul>";	
+$(REFERENCE).each(function(index){
+	referenceText += '<li><a href="' + this.url + '" target="_blank">' + this.name + '</a></li>';
+});
+referenceText += "</ul>";
 
 // automatically render schematic based on the object's properties
 var imageHtml = "";
-imageHtml = '<a href="' + SCHEMATIC.path +'"><img src="' + SCHEMATIC.path +'" height="' + SCHEMATIC.height + '" width="' + SCHEMATIC.width + '" alt="' + SCHEMATIC.title + '"></a>'; 
+imageHtml = '<a href="' + SCHEMATIC.path +'"><img class="ui-corner-all" src="' + SCHEMATIC.path +'" height="' + SCHEMATIC.height + '" width="' + SCHEMATIC.width + '" alt="' + SCHEMATIC.title + '"></a>'; 
 
 // append to schematic div
+$("#reference_list").append(referenceText);
 $("#schematic").append(imageHtml);
 
 </script>
 
+<div id="reference_list"></div>
 <div id="schematic"></div>

@@ -27,7 +27,7 @@ var instructions = [
 // this script will render the html needed to create the table
 var instructions_html = '';
 $(instructions).each(function(index){
-	instructions_html += '<li class="ui-widget-content ui-corner-all">Objective ' + this.stepId.toString() + ': ' + this.objective + '</li>'
+	instructions_html += '<li class="ui-widget-content ui-corner-all" style="padding:10px" ">Objective ' + this.stepId.toString() + ': ' + this.objective + '</li>'
 });
 
 // append html the tbody

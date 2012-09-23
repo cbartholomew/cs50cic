@@ -27,6 +27,13 @@ $(document).ready(function(){
 			fileInfo: "Arduino language reference for all its library's methods."
 		},
 		{ 
+			fileName: "CS50 Spaces",
+			fileType: "Web Site",
+			fileURL:  "http://apps.cs50.net/spaces",
+			fileVersion: "n/a",
+			fileInfo: "Copy and paste code, share with class or others!"
+		},
+		{ 
 			fileName: "CS50.net",
 			fileType: "Web Site",
 			fileURL:  "https://cs50.net",

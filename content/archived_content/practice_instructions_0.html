@@ -1,0 +1,40 @@
+<script>
+
+// place each instruction in the below array as a new object per instruction
+var instructions = [
+	{
+		stepId: 0,
+		objective: "<i>Set the pinMode() for all three LEDs</i>"
+	},
+	{
+		stepId: 1,
+		objective: "<i>Set the led duration to one second & max interval your own choosing</i>"
+	},
+	{
+		stepId: 2,
+		objective: "<i>Implement doForLoop(int interval, int duration)</i>"
+	},
+	{
+		stepId: 3,
+		objective: "<i>Implement doWhileLoop(max_interval,led_duration,y_led_pin)</i>"
+	},
+	{
+		stepId: 4,
+		objective: "<i>Implement doDoWhileLoop(max_interval,led_duration)</i>"
+	}
+];
+
+// this script will render the html needed to create the u list
+var instructions_html = '';
+$(instructions).each(function(index){
+	instructions_html += '<li class="ui-widget-content ui-corner-all" style="padding:10px">Objective ' + this.stepId.toString() + ': ' + this.objective + '</li>'
+});
+
+// append html the tbody
+$("#instructions_list").append(instructions_html);
+
+</script>
+
+<div id="instructions">
+<ul id="instructions_list"></ul>
+</div>

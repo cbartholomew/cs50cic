@@ -4,14 +4,90 @@
 var instructions = [
 	{
 		stepId: 0,
-		objective: "<i>To Do</i>"
-	}
+		objective: "Start the CS50 Appliance and open the terminal window up."
+	},
+	{
+		stepId: 1,
+		objective: "Install the IDE Software by typing: <i>sudo yum install arduino</i>"
+	},
+	{
+		stepId: 2,
+		objective: "After the software is installed, restart your appliance."
+	},
+	{
+		stepId: 3,
+		objective: "When your appliance has been restarted, grab an Arduino and USB Cable. Plug the larger male end of the USB into the Arduino’s power slot. "  + 
+				   "Then, plug the smaller end into your computer. If you are using VMWare fusion, it will ask you where you want to route the USB Connection, " +  
+				   "in this case, choose Linux."
+	},
+	{
+		stepId: 4,
+		objective: "Click the menu in the button in the bottom left hand corner and proceed to the Programming Menu; " 				+
+					"click on the program name “Arduino”. It might be the case a message will come up asking for privileged access " +
+					"to some OS components - do grant access and logout of the appliance. "
+	},				
+	{
+		stepId: 5,
+		objective: "Log back into the Appliance and open the Arduino program once again. The program’s IDE should launch."
+	},
+	{
+		stepId: 6,
+		objective: "Take a moment and check out the article on <a href='http://arduino.cc/en/Guide/Environment'>http://arduino.cc/en/Guide/Environment</a> " + 
+				   "to learn more about the environment, but if you are impatient like me, just go to step 8."
+	},
+	{
+		stepId: 7,
+		objective: "Download the Sketch in the next tab, and open it using the Arduino IDE."
+	},
+	{
+		stepId: 8,
+		objective: "The first <i>//TODO</i> requires understanding of pinMode(), which prepares the pin to be used. It accepts two parameters: first, the " + 
+				   " i/o pin number, which is the pin you want to utilize, and second, a value declaring whether the pin is used for input from the circuit " + 
+				   " (constant value <i>INPUT</i>) or output to the circuit (constant value <i>OUTPUT</i>)."
+	},
+	{
+		stepId: 9,
+		objective: "Arduino UNO R3’s have a built in <i>LED</i> that is configured to pin 13. So, if we want the LED to light up, we need to tell the Arduino " + 
+				   " that it must listen on pin 13 because it will be <i>outputting</i> current. So, go ahead and set pinMode(13,OUTPUT)."
+	},
+	{
+		stepId: 10,
+		objective: "The second <i>//TODO</i> requires understanding of digitalWrite(), which is used to interact with the pin that you configured using pinMode(). " + 
+				   " The first argument is the pin number that you are interacting with. The second argument is a constant that is either HIGH, meaning full voltage " + 
+				   "(on) or LOW, meaning no voltage (off). "
+	},
+	{
+		stepId: 11,
+		objective: "We first want to turn the light on, to do this – we write: digitalWrite(13,HIGH)."
+	},
+	{
+		stepId: 12,
+		objective: "Now, we want to turn the light off using digitalWrite(13,LOW) just under the previous command. "
+	},
+	{
+		stepId: 13,
+		objective: "Upload the code to the Arduino board."
+	},
+	{
+		stepId: 14,
+		objective: "Why does the Arduino LED never blink? Funny enough, it is! We just don’t have super human vision (boo), so we need to slow things down " + 
+		 		   " to give us, “regular humans”, time to see it blink. Let’s try the delay() function, which will stop the code from running based on the " +
+				   " amount of time in milliseconds its parameter is given. For Arduino’s one second is equal to one thousand milliseconds."
+	},
+	{
+		stepId: 15,
+		objective: "Add delay(1000) after BOTH digitalWrite() function calls, and re-upload your code to the Arduino board"
+	},
+	{
+		stepId: 16,
+		objective: "And, that’s it! See <i>Challenges</i> for using the Serial Monitor, or go to Practice Set 1: Let me, ASCII <i>ya</i> name!"
+	},
 ];
 
 // this script will render the html needed to create the u list
 var instructions_html = '';
 $(instructions).each(function(index){
-	instructions_html += '<li class="ui-widget-content ui-corner-all">Objective ' + this.stepId.toString() + ': ' + this.objective + '</li>'
+	instructions_html += '<li class="ui-widget-content ui-corner-all" style="padding:10px">' + this.objective + '</li>'
 });
 
 // append html the tbody
@@ -20,5 +96,5 @@ $("#instructions_list").append(instructions_html);
 </script>
 
 <div id="instructions">
-<ul id="instructions_list"></ul>
+<ol id="instructions_list"></ol>
 </div>

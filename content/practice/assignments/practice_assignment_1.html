@@ -1,0 +1,24 @@
+<script>
+	// just enter is some text line by line
+	var text = "";	
+    text += '<p style="width:600px">';	
+    text+= 'Your assignment is to create an array of chars that contains the UPPERCASE ASCII equivalent of your name.       ';
+    text+= 'For example, “CHRISTOPHER”, would be: <br><br> {67,72,82,73,83,84,79,80,72,69,82}.                              ';
+    text+= '<br><br>                                                                                                        ';
+    text+= 'Afterwards, you’ll pass the array to a function, whereby iterating (looping) through each individual char.      ';
+    text+= 'Each char will then be fed into another special “helper” function called write7_alpha() – an arduino50          ';
+    text+= 'library (kind of like cs50 library) function built to easily display characters on a seven segment display.     ';
+    text+= '<br><br>                                                                                                        ';
+    text+= 'You will also be asked to do the same using an array of numbers, but this time, you will be using the           ';
+    text+= 'write7_digit() function to display a numerical digit, zero through nine.                                        ';
+	text+= '<br><br>																										';
+	text+= 'The end result should be something <a href="videos/IMG_0092.MOV" target="_blank">like this video</a> except  	';
+	text+= ' with your name and not mine! (do mind the low budget iphone camera work)										';
+    text += '</p>';                                                                                                                 
+	
+	$("#assignment").html(text);
+	
+</script>
+
+
+<div id='assignment'></div>

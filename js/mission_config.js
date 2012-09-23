@@ -35,7 +35,7 @@ var MISSION_CONFIG = [
 		{
 			id: 1,
 			type: "Hardware",
-			title: "M1: First Steps",
+			title: "M1:",
 			flavor:{
 				html: "flavor/mission_flavor_1.html",
 				pdf : "flavor/mission_flavor_1.pdf"
