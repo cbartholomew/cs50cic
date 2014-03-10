@@ -32,5 +32,5 @@
 
  	$_SESSION["user"]["fullname"] = "Christopher Milhomem Bartholomew";
  	$_SESSION["user"]["identity"] = "https://id.cs50.net/a10d1de1cacbc180f7231d6fee9489d35c53ad05fc8fffbe92bcfcabab17b892";
- 	$_SESSION["user"]["email"]	  = "cbartholomew@gmail.com";
+ 	$_SESSION["user"]["email"]	  = "";
 ?>
